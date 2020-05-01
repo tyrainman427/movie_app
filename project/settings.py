@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'film',
 ]
 
 MIDDLEWARE = [
@@ -99,6 +100,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
+
+CSRF_COOKIE_SECURE=True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
