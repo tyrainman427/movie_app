@@ -1,24 +1,9 @@
 import requests
+import sqlite3
 
-def get_film(movie):
-    # movie = input("Pick a movie: ")
-    url = f"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/blow"
-
-    headers = {
-        'x-rapidapi-host': "imdb-internet-movie-database-unofficial.p.rapidapi.com",
-        'x-rapidapi-key': "bff6c04355msh46e32c3afb8d323p1eaeedjsnbf048a37783e"
-        }
-
-    response = requests.request("GET", url, headers=headers)
-
-    print(response.text)
-
-
-def search_film():
-    film_list = []
-    image_list = []
-
-    url = f"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/blow"
+def get_film():
+    film_list = {}
+    url = f"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/tt0221027"
 
     headers = {
         'x-rapidapi-host': "imdb-internet-movie-database-unofficial.p.rapidapi.com",
@@ -27,30 +12,34 @@ def search_film():
 
     response = requests.request("GET", url, headers=headers)
 
-    movie = response.json()
-
-    title = movie.values()
-
-    for n in title:
-        print("Title: ",n[0]['title'][0:])
-        title = film_list.append(n[0]['title'][0:])
+    movie  = response.json()
 
 
-        for item in n[0:]:
-            print("Image: ",item['image'])
-            image = item['image']
-            # return image
-    import sqlite3
+    i = movie['id']
+    # print(movie['year'])
+    # print(movie['length'])
+    # print(movie['rating'])
+    # print(movie['rating_votes'])
+    # print(movie['poster'])
+    # print(movie['plot'])
+    # print(movie['trailer']['link'])
+    # print(movie['cast']) # Loop thru this
 
-    conn = sqlite3.connect('film_db.sqlite')
-    cur = conn.cursor()
-    cur.execute('CREATE TABLE film (title VARCHAR, image VARCHAR)')
-    cur.execute('INSERT INTO film (title, image) values (film_list[0], image_list[0])')
+    return film_list
 
-    conn.commit()
+def search_film(movie):
+    movies_list = []
 
-    conn.close()
+    url = f"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/{movie}"
 
-search_film()
-# string = input("Enter a movie: ")
-# search_film(string)
+    headers = {
+        'x-rapidapi-host': "imdb-internet-movie-database-unofficial.p.rapidapi.com",
+        'x-rapidapi-key': "bff6c04355msh46e32c3afb8d323p1eaeedjsnbf048a37783e"
+        }
+
+    response = requests.request("GET", url, headers=headers)
+    titles = response.json()
+
+    for i in range(len(titles['titles'])):
+        movies_list.append(titles['titles'][i])
+    return movies_list

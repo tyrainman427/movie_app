@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="/">TyFlix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Features</a>
       </li>
     </ul>
   </div>
@@ -33,48 +33,21 @@
     <section id="searchbar">
       <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Welcome to TyFlix. </h1><br>
-    <form action="" method="POST">
-      {% csrf_token %}
-      {{ form.as_p }}
-  </form>
-
+    <h1 class="display-4">Welcome to TyFlix.  Home of the best movie searches on the net! </h1><br>
   </div>
 </div>
     </section>
 
-    <section id="results">
 
-    </section>
 
     <div class="container">
       <div class="row">
-              <!-- Cards with Title and image -->
-                  <ul class="list-group list-group-horizontal flex-wrap">
-                      {% for film in films %}
-                    <li class="list-group-item">
-                      <div class="card-deck">
-                      <div class="card border-0"style="width: 15rem;">
-                          <img class="card-img-top" src="{{ film.image }}" alt="film image" style="width: 100%;height: 15vw;object-fit: cover;">
-                          <div class="card-body">
-                            <h5 class="card-title">{{ film.title }}</h5>
-                            <a href="{% url 'movie:details' %}" class="btn btn-primary">Get Details</a>
-                          </div>
-                      </div>
-                    </div>
-                    </li>
-                      {% endfor %}
-                  </ul>
+          <div class="col">
+            
+            <h1>Title: {{ flix.title }}</h1>
+          </div>
       </div>
     </div>
-
-    <footer>
-      <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://tyrainey.io/"> TyRainey.io</a>
-  </div>
-  <!-- Copyright -->
-    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
