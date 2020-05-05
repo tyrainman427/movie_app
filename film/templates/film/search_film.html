@@ -30,7 +30,7 @@
 </nav>
     </header>
 
-    <section id="searchbar">
+    <section id="searchbar" style="padding-top: 31px;">
       <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Welcome to TyFlix. </h1><br>
@@ -45,28 +45,27 @@
 
     <section id="results">
 
-    </section>
-
-    <div class="container">
-      <div class="row">
-              <!-- Cards with Title and image -->
-                  <ul class="list-group list-group-horizontal flex-wrap">
-                      {% for film in films %}
-                    <li class="list-group-item">
-                      <div class="card-deck">
-                      <div class="card border-0"style="width: 15rem;">
-                          <img class="card-img-top" src="{{ film.image }}" alt="film image" style="width: 100%;height: 15vw;object-fit: cover;">
-                          <div class="card-body">
-                            <h5 class="card-title">{{ film.title }}</h5>
-                            <a href="{% url 'movie:details' %}" class="btn btn-primary">Get Details</a>
+          <div class="container">
+            <div class="row">
+                    <!-- Cards with Title and image -->
+                        <ul class="list-group list-group-horizontal flex-wrap">
+                            {% for film in films %}
+                          <li class="list-group-item">
+                            <div class="card-deck">
+                            <div class="card border-0"style="width: 15rem;">
+                                <img class="card-img-top" src="{{ film.image }}" alt="film image" style="width: 100%;height: 15vw;object-fit: cover;">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{ film.title }}</h5>
+                                  <a href="{% url 'movie:details' %}" class="btn btn-primary">Get Details</a>
+                                </div>
+                            </div>
                           </div>
-                      </div>
-                    </div>
-                    </li>
-                      {% endfor %}
-                  </ul>
-      </div>
-    </div>
+                          </li>
+                            {% endfor %}
+                        </ul>
+            </div>
+          </div>
+    </section>
 
     <footer>
       <!-- Copyright -->
