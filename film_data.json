@@ -1,1 +1,55 @@
-[{"title": "Blow", "image": "https://m.media-amazon.com/images/M/MV5BYjg5ZDkzZWEtZDQ2ZC00Y2ViLThhMzYtMmIxZDYzYTY2Y2Y2XkEyXkFqcGdeQXVyODAwMTU1MTE@.jpg", "id": "tt0221027"}, {"title": "Blow", "image": "https://m.media-amazon.com/images/M/MV5BMTU4ODgyNjktMmU4NS00OWQ0LTg2OWUtMzE1ZjNkMDQ5NjJmXkEyXkFqcGdeQXVyNTE4MTY0MDA@.jpg", "id": "tt6304622"}]
+{
+    "Response": "True",
+    "Search": [
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOTg5ZjI5ZTAtOWE2OS00MjY4LWI4ZDQtMzEzMDY4MTgzYWJlXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_SX300.jpg",
+            "Title": "Fate/stay night: Unlimited Blade Works",
+            "Type": "series",
+            "Year": "2014\u20132015",
+            "imdbID": "tt3621796"
+        },
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYTExZmM2ZjktM2E0NS00MjY4LWFkYTktYjc4OWMzMjNmOTgyXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg",
+            "Title": "Fate/stay night",
+            "Type": "series",
+            "Year": "2006",
+            "imdbID": "tt0774809"
+        },
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOGNjNzFhMGQtODc2MS00OGU0LThkN2UtODY1NmJmYWY0NmFiXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg",
+            "Title": "Gekijouban Fate/stay night: Unlimited Blade Works",
+            "Type": "movie",
+            "Year": "2010",
+            "imdbID": "tt1587156"
+        },
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BODljMTI0MDQtMTY2Mi00YjljLThhZTItYjc4MWViMWM5M2RiXkEyXkFqcGdeQXVyNjg3MDM4Mzc@._V1_SX300.jpg",
+            "Title": "Fate/Stay Night: Heaven's Feel - I. Presage Flower",
+            "Type": "movie",
+            "Year": "2017",
+            "imdbID": "tt4054952"
+        },
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjM0ZmIwNjEtNDE4YS00MDQ2LWI2ZTMtYTNkZmMwN2YyZmMwXkEyXkFqcGdeQXVyNzEyMDQ1MDA@._V1_SX300.jpg",
+            "Title": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+            "Type": "movie",
+            "Year": "2019",
+            "imdbID": "tt8091892"
+        },
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjdjNWRlZTQtYzlkYy00ZmUxLTgyZTctZjQwYmE0Zjg5NWY5XkEyXkFqcGdeQXVyNjQ0OTE1MTU@._V1_SX300.jpg",
+            "Title": "Fate/stay night: Realta nua",
+            "Type": "game",
+            "Year": "2007",
+            "imdbID": "tt1280023"
+        },
+        {
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZjgxM2JjNjMtZWNjYy00NDRlLTlkNzctZTliNzA1Mzk1YmRmXkEyXkFqcGdeQXVyNDQxNjcxNQ@@._V1_SX300.jpg",
+            "Title": "Gekijouban Fate/Stay Night: Heaven's Feel - III. Spring Song",
+            "Type": "movie",
+            "Year": "2020",
+            "imdbID": "tt8092118"
+        }
+    ],
+    "totalResults": "7"
+}

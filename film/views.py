@@ -2,8 +2,20 @@ from django.shortcuts import render
 from .models import Film
 from .forms import SearchForm
 from .apis import search_film, get_film
+import json
 import requests
 
+
+def button(request):
+    django_list = []
+    print("Hitting button function")
+    
+    with open('film_data.json', 'r') as content:
+        data = json.load(content)
+        for item in data['titles']:
+            django_list.append(item['id'])
+
+    return render(request,'film/search_film.html',{})
 
 def view_name(request):
 
@@ -25,9 +37,3 @@ def view_name(request):
     return render(request,'film/search_film.html',{'form':form})
 
 
-def film_details(request):
-    context = {
-        "flix":get_film()
-    }
-    print("Pulling the film details....")
-    return render(request,'film/search_results.html',context)
