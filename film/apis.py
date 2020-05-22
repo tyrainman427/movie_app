@@ -13,7 +13,7 @@ def search_film(movie):
     response = requests.request("GET", url)
 
     titles = response.json()
-    print(titles)
+    # print(titles)
 
     # url = f"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/{movie}"
     #
