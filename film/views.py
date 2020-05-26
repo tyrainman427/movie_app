@@ -3,10 +3,16 @@ from .models import Film
 from .forms import SearchForm
 import requests
 from django.views.generic import View
+from film import apis
+import json
 
 
 
 def view_name(request):
+
+
+    apis.get_film()
+    data = apis.film_list
 
     if request.method == 'POST': # If the form has been submitted...
         form = SearchForm(request.POST) # A form bound to the POST data
@@ -15,6 +21,7 @@ def view_name(request):
             title = form.cleaned_data['title']
             # form.save()
             context = {
+            
             }
             print("Searching for films....")
             return render(request,'film/search_film.html',context)

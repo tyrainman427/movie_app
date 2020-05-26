@@ -36,18 +36,19 @@ def search_film(movie):
 
     return movies_list
 
+film_list = []
 def get_film():
-    film_list = []
+
 
     movie = ""
 
-    url = f"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/{movie}"
+    url = f"https://api.themoviedb.org/3/movie/popular?api_key=e293aeb8534bf9c214267c4fff51837e&language=en-US&page=1"
 
-    headers = {
-        'x-rapidapi-host': "imdb-internet-movie-database-unofficial.p.rapidapi.com",
-        'x-rapidapi-key': "bff6c04355msh46e32c3afb8d323p1eaeedjsnbf048a37783e"
-        }
 
-    response = requests.request("GET", url, headers=headers)
-    movie  = response.json().beautiffy()
+
+    response = requests.request("GET", url)
+    movie  = response.json()
+    for i in range(len(movie['results'])):
+        film_list.append(movie['results'][i])
+        
     return film_list

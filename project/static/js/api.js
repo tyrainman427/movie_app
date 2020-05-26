@@ -6,10 +6,11 @@ $(document).ready(function (){
   });
 });
 
+
 function getMovies(searchText){
   axios.get('https://www.omdbapi.com/?s=' + searchText  + '&apikey=5aaeba44')
     .then((response) => {
-       console.log(response);
+
       let movies = response.data.Search
       let output = '';
       $.each(movies,(index, movie) => {
@@ -18,7 +19,7 @@ function getMovies(searchText){
             <div class="well text-center">
               <img src="${movie.Poster}">
               <h5>${movie.Title}</h5>
-              <a onclick="movieSelected('${movie.imdbID}')" class="btn btm-primary">Movie Details</a>
+              <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary">Movie Details</a>
             </div>
             </div>
         `;
@@ -42,7 +43,7 @@ function getMovie() {
 
   axios.get('https://www.omdbapi.com/?i=' + movieId  + '&apikey=5aaeba44')
     .then((response) => {
-       console.log(response);
+
       let movie = response.data
 
       let output = `
@@ -68,7 +69,7 @@ function getMovie() {
           <h3>Plot</h3>
           ${movie.Plot}
           <hr>
-          <a href="/" class="btn btn-default">Go Back To Search</a>
+          <a href="/" class="btn btn-secondary">Go Back To Search</a>
         </div>
         </div>
       `;
@@ -78,3 +79,6 @@ function getMovie() {
       console.log(err);
     });
   }
+
+
+// apikey = 5a9a499aab6b68363c15ff758505f74f
