@@ -1,9 +1,9 @@
-img {
+.img-fluid {
   vertical-align: middle;
   border-style: none;
-  height: 376px;
-  width: 230px;
+  height: 300px;
 }
+
 
 input {
   margin-bottom: 30px;
@@ -15,4 +15,18 @@ a.btn-primary {
 
 .nav.navbar {
   margin-bottom: 30px;
+}
+body {
+  background: url("/static/img/film.jpg") 50% 0 no-repeat fixed;
+  height: 650px;
+  padding: 100px 0 0 0;
+}
+
+h3 {
+  color: white;
+}
+
+.card {
+  width: 250px;
+  height: 450px;
 }

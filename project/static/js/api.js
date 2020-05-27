@@ -15,13 +15,13 @@ function getMovies(searchText){
       let output = '';
       $.each(movies,(index, movie) => {
         output += `
-          <div class="col-3-md">
-            <div class="well text-center">
-              <img src="${movie.Poster}">
-              <h5>${movie.Title}</h5>
-              <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary">Movie Details</a>
-            </div>
-            </div>
+                  <div class="card mr-4 mb-3 text-center">
+                    <img class="img-fluid" src="${movie.Poster}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">${movie.Title}</h5>
+                    <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary">Movie Details</a>
+                </div>
+                </div>
         `;
 
       })
