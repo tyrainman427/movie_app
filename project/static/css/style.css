@@ -12,7 +12,9 @@ input {
 a.btn-primary {
   margin-bottom: 30px;
 }
-
+ #button {
+  color: white;
+}
 .nav.navbar {
   margin-bottom: 30px;
 }

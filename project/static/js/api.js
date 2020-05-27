@@ -1,7 +1,9 @@
 $(document).ready(function (){
   $('#searchForm').on('submit',(e) => {
     let searchText = $('#searchText').val();
-    getMovies(searchText)
+    var res = searchText.replace(" ", "%20");
+    console.log(res)
+    getMovies(res)
     e.preventDefault();
   });
 });
@@ -16,10 +18,10 @@ function getMovies(searchText){
       $.each(movies,(index, movie) => {
         output += `
                   <div class="card mr-4 mb-3 text-center">
-                    <img class="img-fluid" src="${movie.Poster}" alt="Card image cap">
+                    <img class="img-fluid" src="${movie.Poster}" alt="${movie.Title} image">
                     <div class="card-body">
                     <h5 class="card-title">${movie.Title}</h5>
-                    <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary">Movie Details</a>
+                    <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" style="color:white;">Movie Details</a>
                 </div>
                 </div>
         `;
